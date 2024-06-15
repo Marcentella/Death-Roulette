@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: rgb(83, 18, 18);
+    flex-direction: column;
+    overflow: auto;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+button{
+    cursor: pointer;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+    margin-top: 30px;
+}
+
+.button{
+    gap: 10px;
+    border-radius: 16px;
+    padding: 10px;
+    font-size: 30px;
+    background-color: rgba(83, 53, 53, 0.514);
+    color: #747272;
+    transform: scale(0.89);
+    transition: 0.3s;
+    border: 3px solid rgba(107, 107, 107, 0.151);
+}
+
+.not-grey{
+    background-color: rgb(105, 56, 56);
+    color: #fff;
+    transform: scale(1);
+    transition: 0.3s;
+    border: 3px solid rgba(151, 151, 151, 0.151);
+}
+
+.circle {
+    text-align: center;
+    border-radius: 40px;
+    width: 90vw;
+    height: fit-content;
+    background-color: rgb(197, 154, 154);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20pxpx;
+}
+
+#choose-button img{
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: 1s;
+    background-color: rgba(0, 0, 0, 0);
+    width: 14em;
+}
+
+#choose-button{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+#choose-button:active{
+    transform: scale(0.9);
+    transition: 0.5;
+}
+
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    33%{
+        transform: rotate(360deg);
+    }
+
+    66%{
+        transform: rotate(720deg);
+    }
+
+    100%{
+        transform: rotate(1080deg);
+    }
+}
+
+.rotate{
+    animation: rotate 5.7s linear;
+}
+
+.result {
+    color: rgb(136, 15, 15);
+}
+
+#result{
+    font-size: 30px;
+    text-align: center;
+    margin: auto 20px;
+    margin-bottom: 30px;
+}
+
+.nosifer-regular {
+    font-family: "Nosifer", system-ui;
+    font-style: normal;
+}
+:not(.nosifer-regular){
+    font-family: sans-serif;
+}
+
+h1{
+    color: rgb(136, 15, 15);
+    margin-bottom: 40px;
+}
+
+
+
+.close{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(119, 24, 24);
+    color: #fff;
+    border: 1px solid rgb(97, 97, 97);
+    font-weight: 800;
+}
+
+
+@media only screen and (max-height: 650px){
+    .circle{
+        border-radius: 40px;
+        margin-top: 20px;
+    }
+
+    .buttons .button{
+        font-size: 25px;
+    }
+
+    .buttons{
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+    }
+
+    h1.nosifer-regular{
+        margin: 0;
+        font-size: 30px;
+    }
+
+    #result{
+        font-size: 20px;
+    }
+
+    #choose-button img{
+        width: 14em;
+        height: 10em;
+        margin-bottom: 20px;
+    }
+
+    
+
+}
+
+@media only screen and (max-width: 1022px) {
+    .buttons{
+        display: grid;
+        grid-template-columns: repeat(5, 2fr)
+    }
+}
+
+@media only screen and (max-width: 714px) {
+    .buttons{
+        display: grid;
+        grid-template-columns: repeat(4, 2fr)
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .buttons{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr)
+    }
+
+    .circle{
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 432px) {
+
+    .buttons{
+        display: grid;
+        grid-template-columns: repeat(2, 2fr)
+    }
+
+    .circle{
+        margin-top: 300px;
+    }
+}
+
+
