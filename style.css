@@ -165,6 +165,13 @@ h1{
 
 }
 
+@media only screen and (min-width: 1140px) {
+    .circle{
+        width: 40em;
+    }
+}
+
+
 @media only screen and (max-width: 1022px) {
     .buttons{
         display: grid;
