@@ -64,7 +64,7 @@ document.getElementById('choose-button').addEventListener('click', function() {
                         }
                     } else {
                         bwomp.play();
-                        resultDiv.textContent = "No hay personas elegidas.";
+                        resultDiv.textContent = "No hay nadie seleccionado.";
                     }
                 }, 3000);
             }, 1500);
