@@ -80,26 +80,18 @@ button{
     transition: 0.5;
 }
 
-@keyframes rotate{
-    0%{
+@keyframes rotate {
+    0% {
         transform: rotate(0deg);
     }
 
-    33%{
-        transform: rotate(360deg);
-    }
-
-    66%{
-        transform: rotate(720deg);
-    }
-
-    100%{
+    100% {
         transform: rotate(1080deg);
     }
 }
 
-.rotate{
-    animation: rotate 5.7s linear;
+.rotate {
+    animation: rotate 5.7s cubic-bezier(0.20,0.1,0.25,1);
 }
 
 .result {
@@ -107,7 +99,7 @@ button{
 }
 
 #result{
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
     margin: auto 20px;
     margin-bottom: 30px;
@@ -124,6 +116,7 @@ button{
 h1{
     color: rgb(136, 15, 15);
     margin-bottom: 40px;
+    margin-top: 40px;
 }
 
 
@@ -142,7 +135,7 @@ h1{
 @media only screen and (max-height: 650px){
     .circle{
         border-radius: 40px;
-        margin-top: 20px;
+        margin-top: 30px;
     }
 
     .buttons .button{
@@ -154,8 +147,7 @@ h1{
         grid-template-columns: repeat(7, 1fr);
     }
 
-    h1.nosifer-regular{
-        margin: 0;
+    h1{
         font-size: 30px;
     }
 
@@ -195,6 +187,10 @@ h1{
 
     .circle{
         margin-top: 50px;
+    }
+
+    #result{
+        font-size: 20px;
     }
 }
 

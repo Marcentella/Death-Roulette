@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', (event) => {
     const buttons = document.querySelectorAll('button.button');
 
@@ -12,6 +14,8 @@ document.getElementById('choose-button').addEventListener('click', function() {
     const personas = []; // Empty list where the not greyed buttons go
     const resultDiv = document.getElementById('result');
     const chooseButton = document.getElementById('choose-button');
+    var honor = new Audio('sounds/rip.mp3');
+    var bwomp = new Audio('sounds/bwomp.m4a');
 
     chooseButton.classList.add('rotate');
     chooseButton.disabled = true;
@@ -41,11 +45,14 @@ document.getElementById('choose-button').addEventListener('click', function() {
                     if (personas.length > 0) {
                         const chosen = personas[Math.floor(Math.random() * personas.length)];
                         if (chosen === "Karo" || chosen === "Fran" || chosen === "Tamy") {
+                            honor.play();
                             resultDiv.textContent = `La elegida es: ${chosen}`;
                         } else {
+                            honor.play();
                             resultDiv.textContent = `El elegido es: ${chosen}`;
                         }
                     } else {
+                        bwomp.play();
                         resultDiv.textContent = "No hay personas elegidas.";
                     }
                 }, 3000);
