@@ -57,10 +57,10 @@ document.getElementById('choose-button').addEventListener('click', function() {
                         const chosen = personas[Math.floor(Math.random() * personas.length)];
                         if (chosen === "Karo" || chosen === "Fran" || chosen === "Tamy") {
                             honor.play();
-                            resultDiv.textContent = `La elegida es: ${chosen}`;
+                            resultDiv.textContent = `${chosen}`;
                         } else {
                             honor.play();
-                            resultDiv.textContent = `El elegido es: ${chosen}`;
+                            resultDiv.textContent = `${chosen}`;
                         }
                     } else {
                         bwomp.play();
