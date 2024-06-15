@@ -58,11 +58,9 @@ document.getElementById('choose-button').addEventListener('click', function() {
                         if (chosen === "Karo" || chosen === "Fran" || chosen === "Tamy") {
                             honor.play();
                             resultDiv.textContent = `La elegida es: ${chosen}`;
-                        } else if (chosen === "Centella") {
+                        } else {
                             honor.play();
-                            resultDiv.textContent = `El elegido es: 🤫`;
-                        }else{
-
+                            resultDiv.textContent = `El elegido es: ${chosen}`;
                         }
                     } else {
                         bwomp.play();
@@ -75,15 +73,3 @@ document.getElementById('choose-button').addEventListener('click', function() {
 });
 
 
-
-var b = document.getElementById("centella");
-b.addEventListener("click",change);
-function change()
-{
-    b.style.position = "absolute";
-    b.style.transition  = "0.15s";
-    var i = Math.floor(Math.random()*500)+1;
-    var j = Math.floor(Math.random()*500)+1;
-    b.style.left = i+"px";
-    b.style.top = j+"px";
-}
