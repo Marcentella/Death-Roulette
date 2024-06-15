@@ -73,3 +73,17 @@ document.getElementById('choose-button').addEventListener('click', function() {
         }, 700);
     }, 1000);
 });
+
+
+
+var b = document.getElementById("centella");
+b.addEventListener("click",change);
+function change()
+{
+    b.style.position = "absolute";
+    b.style.transition  = "0.15s";
+    var i = Math.floor(Math.random()*500)+1;
+    var j = Math.floor(Math.random()*500)+1;
+    b.style.left = i+"px";
+    b.style.top = j+"px";
+}
