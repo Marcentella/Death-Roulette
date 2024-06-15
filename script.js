@@ -1,11 +1,23 @@
-
-
 document.addEventListener('DOMContentLoaded', (event) => {
     const buttons = document.querySelectorAll('button.button');
 
+    // Function to toggle .not-grey class and update localStorage
+    function toggleNotGrey(button) {
+        button.classList.toggle('not-grey');
+        if (button.classList.contains('not-grey')) {
+            localStorage.setItem(button.textContent, 'true');
+        } else {
+            localStorage.removeItem(button.textContent);
+        }
+    }
+
+    // Initialize .not-grey buttons based on localStorage
     buttons.forEach(button => {
+        if (localStorage.getItem(button.textContent) === 'true') {
+            button.classList.add('not-grey');
+        }
         button.addEventListener('click', () => {
-            button.classList.toggle('not-grey');
+            toggleNotGrey(button);
         });
     });
 });
@@ -24,7 +36,6 @@ document.getElementById('choose-button').addEventListener('click', function() {
         chooseButton.classList.remove('rotate');
     }, 5700);
     resultDiv.textContent = "Eligiendo...";
-
 
     // Find all buttons with the class "not-grey"
     const notGreyButtons = document.querySelectorAll('button.not-grey');
@@ -56,7 +67,7 @@ document.getElementById('choose-button').addEventListener('click', function() {
                         resultDiv.textContent = "No hay personas elegidas.";
                     }
                 }, 3000);
-            }, 1400);
-        }, 900);
-    }, 500);
+            }, 1500);
+        }, 700);
+    }, 1000);
 });

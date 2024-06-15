@@ -5,6 +5,8 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    background-image: url(images/bghell.jpg);
+    background-size: cover;
     background-color: rgb(83, 18, 18);
     flex-direction: column;
     overflow: auto;
@@ -33,7 +35,7 @@ button{
     border-radius: 16px;
     padding: 10px;
     font-size: 30px;
-    background-color: rgba(83, 53, 53, 0.514);
+    background-color: rgb(73, 41, 41);
     color: #747272;
     transform: scale(0.89);
     transition: 0.3s;
@@ -41,7 +43,7 @@ button{
 }
 
 .not-grey{
-    background-color: rgb(105, 56, 56);
+    background-color: rgb(129, 11, 11);
     color: #fff;
     transform: scale(1);
     transition: 0.3s;
@@ -53,11 +55,14 @@ button{
     border-radius: 40px;
     width: 90vw;
     height: fit-content;
-    background-color: rgb(197, 154, 154);
+    background-color: rgb(172, 113, 113);
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 20pxpx;
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    backdrop-filter: blur(6px) saturate(180%);
+    background-color: rgba(228, 115, 115, 0.5);
 }
 
 #choose-button img{
@@ -94,15 +99,13 @@ button{
     animation: rotate 5.7s cubic-bezier(0.20,0.1,0.25,1);
 }
 
-.result {
-    color: rgb(136, 15, 15);
-}
-
 #result{
-    font-size: 25px;
+    font-size: 35px;
     text-align: center;
     margin: auto 20px;
     margin-bottom: 30px;
+    color: rgb(139, 9, 9);
+    -webkit-text-stroke: 1px rgba(75, 18, 18, 0.8);
 }
 
 .nosifer-regular {
@@ -114,7 +117,7 @@ button{
 }
 
 h1{
-    color: rgb(136, 15, 15);
+    color: rgb(126, 20, 20);
     margin-bottom: 40px;
     margin-top: 40px;
 }
@@ -197,7 +200,7 @@ h1{
     }
 
     #result{
-        font-size: 20px;
+        font-size: 25px;
     }
 }
 
