@@ -122,7 +122,17 @@ h1{
     margin-top: 40px;
 }
 
-
+#centella{
+    cursor: not-allowed;
+    border-radius: 16px;
+    padding: 10px;
+    font-size: 30px;
+    background-color: rgb(73, 41, 41) !important;
+    color: #747272;
+    transform: scale(0.89) !important;
+    transition: 0.3s;
+    border: 3px solid rgba(107, 107, 107, 0.151);
+}
 
 .close{
     border-radius: 50%;

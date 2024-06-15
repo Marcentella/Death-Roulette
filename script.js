@@ -58,9 +58,11 @@ document.getElementById('choose-button').addEventListener('click', function() {
                         if (chosen === "Karo" || chosen === "Fran" || chosen === "Tamy") {
                             honor.play();
                             resultDiv.textContent = `La elegida es: ${chosen}`;
-                        } else {
+                        } else if (chosen === "Centella") {
                             honor.play();
-                            resultDiv.textContent = `El elegido es: ${chosen}`;
+                            resultDiv.textContent = `El elegido es: 🤫`;
+                        }else{
+
                         }
                     } else {
                         bwomp.play();
